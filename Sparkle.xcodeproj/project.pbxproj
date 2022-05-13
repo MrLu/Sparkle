@@ -143,7 +143,7 @@
 		5D06E8FD0FD68D6B005AE3F6 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D06E8FB0FD68D61005AE3F6 /* libbz2.dylib */; };
 		5D06E8FF0FD68D6D005AE3F6 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D06E8FB0FD68D61005AE3F6 /* libbz2.dylib */; };
 		5D06E9050FD68D7D005AE3F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
-		5D06E9390FD69271005AE3F6 /* SUBinaryDeltaUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D06E9370FD69271005AE3F6 /* SUBinaryDeltaUnarchiver.h */; };
+		5D06E9390FD69271005AE3F6 /* SUBinaryDeltaUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D06E9370FD69271005AE3F6 /* SUBinaryDeltaUnarchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D06E93A0FD69271005AE3F6 /* SUBinaryDeltaUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06E9380FD69271005AE3F6 /* SUBinaryDeltaUnarchiver.m */; };
 		5D1AF58A0FD7678C0065DB48 /* libxar.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1AF5890FD7678C0065DB48 /* libxar.1.dylib */; };
 		5D1AF58B0FD7678C0065DB48 /* libxar.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1AF5890FD7678C0065DB48 /* libxar.1.dylib */; };
@@ -155,8 +155,8 @@
 		610134740DD250470049ACDF /* SUUpdateDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 610134720DD250470049ACDF /* SUUpdateDriver.m */; };
 		6101347B0DD2541A0049ACDF /* SUProbingUpdateDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = 610134790DD2541A0049ACDF /* SUProbingUpdateDriver.h */; settings = {ATTRIBUTES = (); }; };
 		6101347C0DD2541A0049ACDF /* SUProbingUpdateDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6101347A0DD2541A0049ACDF /* SUProbingUpdateDriver.m */; };
-		6102FE460E077FCE00F85D09 /* SUPipedUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 6102FE440E077FCE00F85D09 /* SUPipedUnarchiver.h */; settings = {ATTRIBUTES = (); }; };
-		6102FE4A0E07803800F85D09 /* SUDiskImageUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 6102FE480E07803800F85D09 /* SUDiskImageUnarchiver.h */; settings = {ATTRIBUTES = (); }; };
+		6102FE460E077FCE00F85D09 /* SUPipedUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 6102FE440E077FCE00F85D09 /* SUPipedUnarchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6102FE4A0E07803800F85D09 /* SUDiskImageUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 6102FE480E07803800F85D09 /* SUDiskImageUnarchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6102FE4B0E07803800F85D09 /* SUDiskImageUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 6102FE490E07803800F85D09 /* SUDiskImageUnarchiver.m */; };
 		611142E910FB1BE5009810AA /* bspatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 611142E810FB1BE5009810AA /* bspatch.h */; };
 		61177A1F0D1112E900749C97 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6117796E0D1112E000749C97 /* IOKit.framework */; };
@@ -166,7 +166,7 @@
 		61299A3009CA2DAB00B7442F /* SUSignatureVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 61299A2E09CA2DAB00B7442F /* SUSignatureVerifier.m */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations"; }; };
 		61299A5C09CA6D4500B7442F /* SUConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 61299A5B09CA6D4500B7442F /* SUConstants.h */; settings = {ATTRIBUTES = (); }; };
 		61299A6009CA6EB100B7442F /* SUConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 61299A5F09CA6EB100B7442F /* SUConstants.m */; };
-		61299A8D09CA790200B7442F /* SUUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 61299A8B09CA790200B7442F /* SUUnarchiver.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		61299A8D09CA790200B7442F /* SUUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 61299A8B09CA790200B7442F /* SUUnarchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61299A8E09CA790200B7442F /* SUUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 61299A8C09CA790200B7442F /* SUUnarchiver.m */; };
 		61299B3609CB04E000B7442F /* Sparkle.h in Headers */ = {isa = PBXBuildFile; fileRef = 61299B3509CB04E000B7442F /* Sparkle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		612DCBAF0D488BC60015DBEA /* SUUpdatePermissionPrompt.h in Headers */ = {isa = PBXBuildFile; fileRef = 612DCBAD0D488BC60015DBEA /* SUUpdatePermissionPrompt.h */; settings = {ATTRIBUTES = (); }; };
@@ -225,11 +225,11 @@
 		721CF1AA1AD7647000D9AC09 /* libxar.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1AF5890FD7678C0065DB48 /* libxar.1.dylib */; };
 		721CF1AB1AD764EB00D9AC09 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D06E8FB0FD68D61005AE3F6 /* libbz2.dylib */; };
 		721D5B5A25C6940400D23BEA /* SUFlatPackageUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 721D5B5825C6940400D23BEA /* SUFlatPackageUnarchiver.m */; };
-		721D5B5B25C6940400D23BEA /* SUFlatPackageUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 721D5B5925C6940400D23BEA /* SUFlatPackageUnarchiver.h */; };
+		721D5B5B25C6940400D23BEA /* SUFlatPackageUnarchiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 721D5B5925C6940400D23BEA /* SUFlatPackageUnarchiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		721D5B6925C69A6900D23BEA /* test.sparkle_interactive.pkg in Resources */ = {isa = PBXBuildFile; fileRef = 721D5B6825C69A6900D23BEA /* test.sparkle_interactive.pkg */; };
 		721D5B8625C69F4A00D23BEA /* SUFlatPackageUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 721D5B5825C6940400D23BEA /* SUFlatPackageUnarchiver.m */; };
-		722589D71E0AD86B005EA0B9 /* SUUnarchiverProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 722589D61E0AD86B005EA0B9 /* SUUnarchiverProtocol.h */; };
-		722589DA1E0B19F4005EA0B9 /* SUUnarchiverNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 722589D81E0B19F4005EA0B9 /* SUUnarchiverNotifier.h */; };
+		722589D71E0AD86B005EA0B9 /* SUUnarchiverProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 722589D61E0AD86B005EA0B9 /* SUUnarchiverProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		722589DA1E0B19F4005EA0B9 /* SUUnarchiverNotifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 722589D81E0B19F4005EA0B9 /* SUUnarchiverNotifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		722589DB1E0B19F4005EA0B9 /* SUUnarchiverNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 722589D91E0B19F4005EA0B9 /* SUUnarchiverNotifier.m */; };
 		722954B71D04ADAF00ECF9CA /* fileop.m in Sources */ = {isa = PBXBuildFile; fileRef = 722954B61D04ADAF00ECF9CA /* fileop.m */; };
 		722954BC1D04AE1100ECF9CA /* SUFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7275F9C01B5F1F2900B1D19E /* SUFileManager.m */; };
@@ -1784,13 +1784,19 @@
 				72E1D7DE25A3E3AD0001BA6D /* SUWebViewCommon.h in Headers */,
 				5AB8F187214D564C00A1187F /* precomp_data.h in Headers */,
 				5AB8F18F214D564C00A1187F /* sc.h in Headers */,
-				721D5B5B25C6940400D23BEA /* SUFlatPackageUnarchiver.h in Headers */,
 				5AB8F181214D564C00A1187F /* sha512.h in Headers */,
 				61299B3609CB04E000B7442F /* Sparkle.h in Headers */,
 				34074B9F1FEABD5A001CB3A5 /* SPUDownloadData.h in Headers */,
 				34074B911FEABD08001CB3A5 /* SPUDownloader.h in Headers */,
 				34074B921FEABD08001CB3A5 /* SPUDownloaderDelegate.h in Headers */,
+				61299A8D09CA790200B7442F /* SUUnarchiver.h in Headers */,
+				722589D71E0AD86B005EA0B9 /* SUUnarchiverProtocol.h in Headers */,
+				722589DA1E0B19F4005EA0B9 /* SUUnarchiverNotifier.h in Headers */,
+				721D5B5B25C6940400D23BEA /* SUFlatPackageUnarchiver.h in Headers */,
 				34074B931FEABD08001CB3A5 /* SPUDownloaderProtocol.h in Headers */,
+				5D06E9390FD69271005AE3F6 /* SUBinaryDeltaUnarchiver.h in Headers */,
+				6102FE4A0E07803800F85D09 /* SUDiskImageUnarchiver.h in Headers */,
+				6102FE460E077FCE00F85D09 /* SUPipedUnarchiver.h in Headers */,
 				34074BA21FEABFD2001CB3A5 /* SPUDownloaderSession.h in Headers */,
 				34074B961FEABD24001CB3A5 /* SPULocalCacheDirectory.h in Headers */,
 				34074B9B1FEABD49001CB3A5 /* SPUURLRequest.h in Headers */,
@@ -1801,11 +1807,9 @@
 				6120721209CC5C4B007FE0F6 /* SUAutomaticUpdateAlert.h in Headers */,
 				61B93B270DD0FDD300DCD2F8 /* SUAutomaticUpdateDriver.h in Headers */,
 				61F83F740DBFE141006FDD30 /* SUBasicUpdateDriver.h in Headers */,
-				5D06E9390FD69271005AE3F6 /* SUBinaryDeltaUnarchiver.h in Headers */,
 				72316BD91E0E17180039EFD9 /* SUBundleIcon.h in Headers */,
 				61B078CE15A5FB6100600039 /* SUCodeSigningVerifier.h in Headers */,
 				61299A5C09CA6D4500B7442F /* SUConstants.h in Headers */,
-				6102FE4A0E07803800F85D09 /* SUDiskImageUnarchiver.h in Headers */,
 				55E6F33319EC9F6C00005E76 /* SUErrors.h in Headers */,
 				14652F8419A978C200959E44 /* SUExport.h in Headers */,
 				7275F9C11B5F1F2900B1D19E /* SUFileManager.h in Headers */,
@@ -1818,7 +1822,6 @@
 				55C14F06136EF6DB00649790 /* SULog.h in Headers */,
 				726F2CE51BC9C33D001971A4 /* SUOperatingSystem.h in Headers */,
 				618FA5220DAE8E8A0026945C /* SUPackageInstaller.h in Headers */,
-				6102FE460E077FCE00F85D09 /* SUPipedUnarchiver.h in Headers */,
 				618FA5050DAE8AB80026945C /* SUPlainInstaller.h in Headers */,
 				6101347B0DD2541A0049ACDF /* SUProbingUpdateDriver.h in Headers */,
 				61B93C090DD112FF00DCD2F8 /* SUScheduledUpdateDriver.h in Headers */,
@@ -1830,9 +1833,6 @@
 				72316BE31E0E1C7F0039EFD9 /* SUSystemUpdateInfo.h in Headers */,
 				E1545EC51E1D7E0200FAECE8 /* SUTouchBarButtonGroup.h in Headers */,
 				61B93A3C0DD02D7000DCD2F8 /* SUUIBasedUpdateDriver.h in Headers */,
-				61299A8D09CA790200B7442F /* SUUnarchiver.h in Headers */,
-				722589DA1E0B19F4005EA0B9 /* SUUnarchiverNotifier.h in Headers */,
-				722589D71E0AD86B005EA0B9 /* SUUnarchiverProtocol.h in Headers */,
 				61B5FCDF09C52A9F00B25A18 /* SUUpdateAlert.h in Headers */,
 				610134730DD250470049ACDF /* SUUpdateDriver.h in Headers */,
 				612DCBAF0D488BC60015DBEA /* SUUpdatePermissionPrompt.h in Headers */,

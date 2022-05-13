@@ -33,6 +33,14 @@
 #import "SPUURLRequest.h"
 #import "SUCodeSigningVerifier.h"
 
+#import "SUUnarchiverProtocol.h"
+#import "SUUnarchiver.h"
+#import "SUBinaryDeltaUnarchiver.h"
+#import "SUDiskImageUnarchiver.h"
+#import "SUPipedUnarchiver.h"
+#import "SUFlatPackageUnarchiver.h"
+#import "SUUnarchiverNotifier.h"
+
 #pragma clang diagnostic pop
 
 #endif

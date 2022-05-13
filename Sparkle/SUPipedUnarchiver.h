@@ -9,12 +9,18 @@
 #ifndef SUPIPEDUNARCHIVER_H
 #define SUPIPEDUNARCHIVER_H
 
+#if __has_feature(modules)
+@import Foundation;
+#else
 #import <Foundation/Foundation.h>
+#endif
+#import "SUExport.h"
+
 #import "SUUnarchiverProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SUPipedUnarchiver : NSObject <SUUnarchiverProtocol>
+SU_EXPORT @interface SUPipedUnarchiver : NSObject <SUUnarchiverProtocol>
 
 - (instancetype)initWithArchivePath:(NSString *)archivePath;
 
