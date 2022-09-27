@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param installationPath The path the new bundlePath will be installed to.
  @param fileOperationToolPath The path to the file operation tool for authorized operations.
  */
-- (instancetype)initWithHost:(SUHost *)host bundlePath:(NSString *)bundlePath installationPath:(NSString *)installationPath fileOperationToolPath:(NSString *)fileOperationToolPath;
+- (instancetype)initWithHost:(SUHost *)host bundlePath:(NSString *)bundlePath installationPath:(NSString *)installationPath fileOperationToolPath:(NSString *)fileOperationToolPath shouldCompareVersion:(BOOL)shouldCompareVersion;
 
 @end
 

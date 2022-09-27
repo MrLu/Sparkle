@@ -24,6 +24,7 @@
 @property (nonatomic, copy, readonly) NSString *bundlePath;
 @property (nonatomic, copy, readonly) NSString *installationPath;
 @property (nonatomic, copy, readonly) NSString *fileOperationToolPath;
+@property (nonatomic, assign, readonly) BOOL shouldCompareVersion;
 
 @end
 
@@ -33,8 +34,9 @@
 @synthesize bundlePath = _bundlePath;
 @synthesize installationPath = _installationPath;
 @synthesize fileOperationToolPath = _fileOperationToolPath;
+@synthesize shouldCompareVersion = _shouldCompareVersion;
 
-- (instancetype)initWithHost:(SUHost *)host bundlePath:(NSString *)bundlePath installationPath:(NSString *)installationPath fileOperationToolPath:(NSString *)fileOperationToolPath
+- (instancetype)initWithHost:(SUHost *)host bundlePath:(NSString *)bundlePath installationPath:(NSString *)installationPath fileOperationToolPath:(NSString *)fileOperationToolPath shouldCompareVersion:(BOOL)shouldCompareVersion
 {
     self = [super init];
     if (self != nil) {
@@ -42,6 +44,7 @@
         _bundlePath = [bundlePath copy];
         _installationPath = [installationPath copy];
         _fileOperationToolPath = [fileOperationToolPath copy];
+        _shouldCompareVersion = shouldCompareVersion;
     }
     return self;
 }
@@ -243,7 +246,7 @@
         NSString *updateVersion = [updateHost objectForInfoDictionaryKey:(__bridge NSString *)kCFBundleVersionKey];
 
         id<SUVersionComparison> comparator = [[SUStandardVersionComparator alloc] init];
-        if (!updateVersion || [comparator compareVersion:hostVersion toVersion:updateVersion] == NSOrderedDescending) {
+        if (!updateVersion || (self.shouldCompareVersion && [comparator compareVersion:hostVersion toVersion:updateVersion] == NSOrderedDescending)) {
             if (error != NULL) {
                 NSString *errorMessage = [NSString stringWithFormat:@"For security reasons, updates that downgrade version of the application are not allowed. Refusing to downgrade app from version %@ to %@. Aborting update.", hostVersion, updateVersion];
 

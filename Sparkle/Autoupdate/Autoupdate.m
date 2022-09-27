@@ -33,7 +33,7 @@ static const NSTimeInterval SUTerminationTimeDelay = 0.5;
  * shouldRelaunch - indicates if the new installed app should re-launched
  * shouldShowUI - indicates if we should show the status window when installing the update
  */
-- (instancetype)initWithHostPath:(NSString *)hostPath relaunchPath:(NSString *)relaunchPath parentProcessId:(pid_t)parentProcessId updateFolderPath:(NSString *)updateFolderPath shouldRelaunch:(BOOL)shouldRelaunch shouldShowUI:(BOOL)shouldShowUI;
+- (instancetype)initWithHostPath:(NSString *)hostPath relaunchPath:(NSString *)relaunchPath parentProcessId:(pid_t)parentProcessId updateFolderPath:(NSString *)updateFolderPath shouldRelaunch:(BOOL)shouldRelaunch shouldShowUI:(BOOL)shouldShowUI shouldCompareVersion:(BOOL)shouldCompareVersion;
 
 @end
 
@@ -47,7 +47,7 @@ static const NSTimeInterval SUTerminationTimeDelay = 0.5;
 @property (nonatomic, copy) NSString *relaunchPath;
 @property (nonatomic, assign) BOOL shouldRelaunch;
 @property (nonatomic, assign) BOOL shouldShowUI;
-
+@property (nonatomic, assign) BOOL shouldCompareVersion;
 @property (nonatomic, assign) BOOL isTerminating;
 
 @end
@@ -61,9 +61,10 @@ static const NSTimeInterval SUTerminationTimeDelay = 0.5;
 @synthesize relaunchPath = _relaunchPath;
 @synthesize shouldRelaunch = _shouldRelaunch;
 @synthesize shouldShowUI = _shouldShowUI;
+@synthesize shouldCompareVersion = _shouldCompareVersion;
 @synthesize isTerminating = _isTerminating;
 
-- (instancetype)initWithHostPath:(NSString *)hostPath relaunchPath:(NSString *)relaunchPath parentProcessId:(pid_t)parentProcessId updateFolderPath:(NSString *)updateFolderPath shouldRelaunch:(BOOL)shouldRelaunch shouldShowUI:(BOOL)shouldShowUI
+- (instancetype)initWithHostPath:(NSString *)hostPath relaunchPath:(NSString *)relaunchPath parentProcessId:(pid_t)parentProcessId updateFolderPath:(NSString *)updateFolderPath shouldRelaunch:(BOOL)shouldRelaunch shouldShowUI:(BOOL)shouldShowUI shouldCompareVersion:(BOOL)shouldCompareVersion
 {
     if (!(self = [super init])) {
         return nil;
@@ -76,7 +77,7 @@ static const NSTimeInterval SUTerminationTimeDelay = 0.5;
     self.updateFolderPath = updateFolderPath;
     self.shouldRelaunch = shouldRelaunch;
     self.shouldShowUI = shouldShowUI;
-    
+    self.shouldCompareVersion = shouldCompareVersion;
     return self;
 }
 
@@ -126,7 +127,7 @@ static const NSTimeInterval SUTerminationTimeDelay = 0.5;
     }
     
     NSError *retrieveInstallerError = nil;
-    id<SUInstallerProtocol> installer = [SUInstaller installerForHost:host fileOperationToolPath:fileOperationToolPath updateDirectory:self.updateFolderPath error:&retrieveInstallerError];
+    id<SUInstallerProtocol> installer = [SUInstaller installerForHost:host fileOperationToolPath:fileOperationToolPath updateDirectory:self.updateFolderPath shouldCompareVersion:self.shouldCompareVersion error:&retrieveInstallerError];
     if (installer == nil) {
         SULog(SULogLevelError, @"Retrieved Installer Error: %@", retrieveInstallerError);
         exit(EXIT_FAILURE);
@@ -235,7 +236,7 @@ int main(int __unused argc, const char __unused *argv[])
     @autoreleasepool
     {
         NSArray<NSString *> *args = [[NSProcessInfo processInfo] arguments];
-        if (args.count < 5 || args.count > 7) {
+        if (args.count < 5) {
             return EXIT_FAILURE;
         }
         
@@ -251,7 +252,8 @@ int main(int __unused argc, const char __unused *argv[])
                                                             parentProcessId:[[args objectAtIndex:3] intValue]
                                                            updateFolderPath:[args objectAtIndex:4]
                                                              shouldRelaunch:(args.count > 5) ? [[args objectAtIndex:5] boolValue] : YES
-                                                               shouldShowUI:shouldShowUI];
+                                                               shouldShowUI:shouldShowUI
+                                                       shouldCompareVersion:(args.count > 7) ? [[args objectAtIndex:7] boolValue] : YES];
         [application setDelegate:appInstaller];
         [application run];
     }
