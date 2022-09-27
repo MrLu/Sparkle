@@ -199,7 +199,7 @@ static const NSTimeInterval SUTerminationTimeDelay = 0.5;
             SULog(SULogLevelError, @"Couldn't remove update folder: %@.", theError);
         }
         
-        [[NSFileManager defaultManager] removeItemAtPath:[[NSBundle mainBundle] bundlePath] error:NULL];
+    //    [[NSFileManager defaultManager] removeItemAtPath:[[NSBundle mainBundle] bundlePath] error:NULL];
         
         exit(EXIT_SUCCESS);
     };
